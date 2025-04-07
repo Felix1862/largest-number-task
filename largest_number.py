@@ -10,7 +10,7 @@
 # => 8
 
 # Functions for differentiating the Maximum number in a list
-def largest_number(ln):
+def largest_number(number_list):
     """Find the largest number in a list.
 
     Args:
@@ -19,13 +19,13 @@ def largest_number(ln):
     Returns:
         integers: Leveraging slicing to get the highest number.
     """
-    if len(ln) == 1:
-        return ln[0]
-    return max(ln[0], largest_number(ln[1:]))  # Compares 1st element & last.
+    if len(number_list) == 1:
+        return number_list[0]
+    return max(number_list[0], largest_number(number_list[1:]))  # Compares 1st element & last.
 
 
 # Number input
-number1 = [1, 4, 5, 3]
-number2 = [3, 1, 6, 8, 2, 4, 5]
-print(largest_number(number1))
-print(largest_number(number2))
+sample_list1 = [1, 4, 5, 3]
+sample_list2 = [3, 1, 6, 8, 2, 4, 5]
+print(largest_number(sample_list1))
+print(largest_number(sample_list2))
