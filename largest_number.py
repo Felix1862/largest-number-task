@@ -19,9 +19,11 @@ def largest_number(number_list):
     Returns:
         integers: Leveraging slicing to get the highest number.
     """
+    # Validate input
     if len(number_list) == 1:
         return number_list[0]
-    return max(number_list[0], largest_number(number_list[1:]))  # Compares 1st element & last.
+    # Recursively compare first element with largest of the rest
+    return max(number_list[0], largest_number(number_list[1:]))
 
 
 # Number input
